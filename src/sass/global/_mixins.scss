@@ -1,14 +1,32 @@
 @mixin respond($breakpoint) {
-    @if $breakpoint == tab-port {
-        @media (min-width: 37.5em) { @content };
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5em) {
+      @content;
     }
-    @if $breakpoint == land-port {
-        @media (min-width: 56.25em) { @content };
+  }
+  @if $breakpoint == land-port {
+    @media (min-width: 56.25em) {
+      @content;
     }
-    @if $breakpoint == desktop {
-        @media (min-width: 75em) { @content };
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 75em) {
+      @content;
     }
-    @if $breakpoint == big-desktop {
-        @media (min-width: 112.5em) { @content };
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
     }
+  }
+}
+
+@mixin picture {
+  height: 15em;
+  width: 14em;
+  margin-top: 2.5em;
+  background-position: center;
+  background-size: 105%;
+  background-repeat: no-repeat;
+  border: var(--border-md);
 }

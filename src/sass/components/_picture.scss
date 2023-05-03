@@ -1,0 +1,102 @@
+.image-container {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  border-top: var(--border-sm);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  @include respond(land-port) {
+    height: 100%;
+    width: 50%;
+    border-top: none;
+    border-left: var(--border-sm);
+  }
+
+  &__image-box {
+    grid-row: 2/4;
+    grid-column: 2/4;
+    min-height: 21.25em;
+    min-width: 20.2em;
+    background-color: hsl(var(--color-highlight-2));
+    border: var(--border-xsm);
+    box-shadow: var(--box-shadow-md);
+    display: grid;
+    place-items: center;
+  
+    &--image {
+      @include picture;
+      background-image: linear-gradient(
+          hsl(var(--color-highlight-4) / 0.2),
+          hsl(var(--color-highlight-1) / 0.1)
+        ),
+        url(../../../public/img/profile-pictures/joel-kid-1.jpg);
+      
+    }
+  
+    &--name {
+      margin: 2em 1em 2em 6em;
+      padding: 0.5em 1em;
+      background-color: hsl(var(--color-highlight-4));
+      box-shadow: 0.1875em 0.1875em 0 hsl(var(--color-dark) / 0.5);
+    }
+  }
+  
+  &__badge {
+    position: absolute;
+    height: 5em;
+    width: 5em;
+  
+    &--1 {
+      grid-column: 3/3;
+      grid-row: 2/2;
+      align-self: end;
+      justify-self: flex-end;
+      transform: rotate(8deg);
+    }
+  
+    &--2 {
+      grid-column: 2/2;
+      grid-row: 1/1;
+      justify-self: flex-start;
+      align-self: flex-start;
+      transform: rotate(-30deg);
+  
+      @include respond(land-port) {
+        grid-row: 2/2;
+      }
+    }
+  
+    &--3 {
+      grid-column: 3/3;
+      grid-row: 3/3;
+      justify-self: flex-end;
+      align-self: center;
+      transform: rotate(-160deg);
+    }
+  
+    &--4 {
+      grid-column: 2/2;
+      grid-row: 3/3;
+      align-self: start;
+      justify-self: start;
+      transform: rotate(-113deg);
+    }
+  
+    &--5 {
+      grid-column: 2/2;
+      grid-row: 4/4;
+      align-self: flex-end;
+      justify-self: center;
+      transform: rotate(7deg);
+  
+      @include respond(land-port) {
+        grid-row: 3/3;
+      }
+    }
+  }
+}
+

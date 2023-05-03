@@ -26,7 +26,7 @@
       <ul class="nav__list">
         <li class="nav__item"><a href="#" class="nav__link coolLink" data-text="Home"><span>Home</span></a></li>
         <li class="nav__item"><a href="#" class="nav__link coolLink" data-text="About"><span>About</span></a></li>
-        <li class="nav__item"><a href="#" class="nav__link coolLink" data-text="Skills"><span>Skills</span></a></li>
+        <!-- <li class="nav__item"><a href="#" class="nav__link coolLink" data-text="Skills"><span>Skills</span></a></li> -->
         <li class="nav__item"><a href="#" class="nav__link coolLink" data-text="Projects"><span>Projects</span></a></li>
         <li class="nav__item"><a href="#" class="nav__link coolLink" data-text="Contact"><span>Contact</span></a></li>
       </ul>
@@ -48,30 +48,55 @@
         <p class="hero__job-title--description">Frontend Developer</p>
       </container>
     </div>
-    <div class="hero__image-container">
-      <div class="hero__image-box">
-        <div class="hero__image-box--image"></div>
-        <p class="hero__image-box--name">Joel Borofsky</p>
+    <div class="image-container">
+      <div class="image-container__image-box">
+        <div class="image-container__image-box--image"></div>
+        <p class="image-container__image-box--name">Joel Borofsky</p>
       </div>
       
       <svg>
-        <img src="bundles/element/Elements-08.svg" class="hero__badge hero__badge--1" alt="">
+        <img src="bundles/element/Elements-08.svg" class="image-container__badge image-container__badge--1" alt="">
       </svg>
       <svg>
-        <img src="bundles/element/ZigZag-02.svg" class="hero__badge hero__badge--2" alt="">
+        <img src="bundles/element/ZigZag-02.svg" class="image-container__badge image-container__badge--2" alt="">
       </svg>
       <svg>
-        <img src="bundles/element/ZigZag-01.svg" class="hero__badge hero__badge--3" alt="">
+        <img src="bundles/element/ZigZag-01.svg" class="image-container__badge image-container__badge--3" alt="">
       </svg>
       <svg>
-        <img src="bundles/element/ZigZag-06.svg" class="hero__badge hero__badge--4" alt="">
+        <img src="bundles/element/ZigZag-06.svg" class="image-container__badge image-container__badge--4" alt="">
       </svg>
       <svg>
-        <img src="bundles/element/Elements-02.svg" class="hero__badge hero__badge--5" alt="">
+        <img src="bundles/element/Elements-02.svg" class="image-container__badge image-container__badge--5" alt="">
       </svg>
       <svg>
-        <img src="bundles/element/Elements-05.svg" class="hero__badge hero__badge--5" alt="">
+        <img src="bundles/element/Elements-05.svg" class="image-container__badge image-container__badge--5" alt="">
       </svg>
+    </div>
+  </section>
+
+<!--------------------------------------------------------->
+<!-- ABOUT                                               -->
+<!--------------------------------------------------------->
+
+  <section class="about" id="about">
+    <div class="about__icons"></div>
+    <div class="about__skills">
+      <h2 class="section-title">Skills</h2>
+      <ul class="about__list">
+        <li class="about__list--item">HTML, CSS, SASS, TailwindCSS</li>
+        <li class="about__list--item">JavaScript, React, Next.js</li>
+        <li class="about__list--item">Threejs, React Three Fiber, GSAP</li>
+        <li class="about__list--item">Figma, Blender, Gimp</li>
+      </ul>
+    </div>
+    <div class="about__content">
+      <p>Currently based out of Wichita, KS, I am a frontend developer with an eye for design. I’m a pretty big fan of CSS (SCSS,
+      who are we kidding here), Star Wars, Three.js, taking walks, cooking, Cities: Skylines, React Three Fiber, experiencing
+      new cultures, people, and places, and a whole lot more.</p>
+    </div>
+    <div class="about__objects">
+      <canvas class="webgl"></canvas>
     </div>
   </section>
   <script type="module" src="src/js/main.js"></script>
