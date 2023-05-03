@@ -59,7 +59,7 @@
   }
 
   &__image-box {
-    position: relative;
+    position: absolute;
     min-height: 21.25em;
     min-width: 20.2em;
     background-color: hsl(var(--color-highlight-2));
@@ -84,13 +84,49 @@
     }
 
     &--name {
-        // position: absolute;
-        bottom: 1em;
-        right: 2em;
-        margin: 2em 1em 2em 6em;
-        padding: 0.5em 1em;
-        background-color: hsl(var(--color-highlight-4));
-        box-shadow: 0.1875em 0.1875em 0 hsl(var(--color-dark) / 0.5);
+      // position: absolute;
+      bottom: 1em;
+      right: 2em;
+      margin: 2em 1em 2em 6em;
+      padding: 0.5em 1em;
+      background-color: hsl(var(--color-highlight-4));
+      box-shadow: 0.1875em 0.1875em 0 hsl(var(--color-dark) / 0.5);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    height: 5em;
+    width: 5em;
+
+    &--1 {
+      top: 0;
+      right: 15em;
+      transform: rotate(8deg);
+    }
+
+    &--2 {
+      top: 4em;
+      left: 13em;
+      transform: rotate(-30deg);
+    }
+
+    &--3 {
+      bottom: 8em;
+      right: 14em;
+      transform: rotate(-45deg);
+    }
+
+    &--4 {
+      bottom: 5em;
+      left: 14em;
+      transform: rotate(113deg);
+    }
+
+    &--5 {
+      bottom: 0.4em;
+      right: 13em;
+      transform: rotate(7deg);
     }
   }
 }
