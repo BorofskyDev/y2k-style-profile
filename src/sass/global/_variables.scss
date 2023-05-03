@@ -1,0 +1,56 @@
+:root {
+  // Colors
+
+  --color-primary-regular: 299 78% 84%;
+  --color-primary-dark: 270 99% 47%;
+  --color-primary-light: 322 100% 61%;
+  --color-primary-xlight: 313 100% 79%;
+
+  --color-highlight-1: 76 100% 83%;
+  --color-highlight-2: 164 77% 80%;
+  --color-highlight-3: 168 49% 46%;
+  --color-highlight-4: 341 77% 72%;
+
+  --color-light-1: 331 57% 97%;
+  --color-light-2: 0 0% 92%;
+  --color-light-3: 223 18% 79%;
+
+  --color-dark: 135 100% 1%;
+
+  //   Typography
+
+  --text-paragraph: 'JetBrains Mono', monospace;
+  --text-heading: 'IBM Plex Mono', monospace;
+  --text-link: 'K2D', sans-serif;
+
+  // Font Size
+
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
+  --fs-500: 1rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  @media (min-width: 35em) {
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+  }
+
+  @media (min-width: 45em) {
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+  }
+
+  // Shadows
+
+  --box-shadow-sm: 0.4rem 0.4rem 0 hsl(var(--color-dark));
+}
