@@ -8,8 +8,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; //10px / 16px = 1rem = 10px
-  // font-size: 100%;
+  // font-size: 62.5%; //10px / 16px = 1rem = 10px
+  font-size: 100%;
 }
 
 a,
@@ -54,8 +54,8 @@ h6 {
 
 body {
     background-color: hsl(var(--color-primary-dark));
-    font-family: var(--font-paragraph);
+    font-family: var(--text-paragraph);
     color: hsl(var(--color-dark));
-    font-size: var(--fs-700);
+    font-size: var(--fs-400);
     -webkit-font-smoothing: antialiased;
 }
