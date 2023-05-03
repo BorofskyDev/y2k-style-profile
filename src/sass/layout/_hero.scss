@@ -72,8 +72,11 @@
     width: 100%;
     border-top: var(--border-sm);
     display: grid;
-    place-items: center;
-
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    
     @include respond(land-port) {
     height: 100%;
     width: 50%;
@@ -83,7 +86,9 @@
   }
 
   &__image-box {
-    position: absolute;
+    grid-row: 2/4;
+    grid-column: 2/4;
+    // position: absolute;
     min-height: 21.25em;
     min-width: 20.2em;
     background-color: hsl(var(--color-highlight-2));
@@ -108,9 +113,6 @@
     }
 
     &--name {
-      // position: absolute;
-      bottom: 1em;
-      right: 2em;
       margin: 2em 1em 2em 6em;
       padding: 0.5em 1em;
       background-color: hsl(var(--color-highlight-4));
@@ -124,32 +126,42 @@
     width: 5em;
 
     &--1 {
-      top: 1%;
-      right: 8%;
+      grid-column: 3/3;
+      grid-row: 2/2;
+      align-self: end;
+      justify-self: flex-end;
       transform: rotate(8deg);
     }
 
     &--2 {
-      top: 7%;
-      left: 10%;
+      grid-column: 2/2;
+      grid-row: 1/1;
+      justify-self: flex-start;
+      align-self: flex-start;
       transform: rotate(-30deg);
     }
 
     &--3 {
-      bottom: 30%;
-      right: 10%;
-      transform: rotate(-70deg);
+      grid-column: 3/3;
+      grid-row: 3/3;
+      justify-self: flex-end;
+      align-self: center;
+      transform: rotate(-160deg);
     }
 
     &--4 {
-      bottom: 9%;
-      left: 8%;
-      transform: rotate(113deg);
+      grid-column: 2/2;
+      grid-row: 3/3;
+      align-self: start;
+      justify-self: start;
+      transform: rotate(-113deg);
     }
 
     &--5 {
-      bottom: -5%;
-      right: 30%;
+      grid-column: 2/2;
+      grid-row: 4/4;
+      align-self: flex-end;
+      justify-self: center;
       transform: rotate(7deg);
     }
   }
