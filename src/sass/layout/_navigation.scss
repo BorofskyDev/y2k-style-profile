@@ -54,16 +54,16 @@ header {
     background: transparent;
     padding: 0.5em;
 
-    &:hover,
-    &:focus {
-      color: hsl(var(--color-highlight-2));
-      text-shadow: 0.1em 0.1em 0 hsl(var(--color-dark));
+    // &:hover,
+    // &:focus {
+    //   color: hsl(var(--color-highlight-2));
+    //   text-shadow: 0.1em 0.1em 0 hsl(var(--color-dark));
 
-      @include respond(land-port) {
-        background-color:hsl(var(--color-light-3) / 0.9);
-        padding: 0.5em;
-      }
-    }
+    //   @include respond(land-port) {
+    //     background-color:hsl(var(--color-light-3) / 0.9);
+    //     padding: 0.5em;
+    //   }
+    // }
   }
 
 }
