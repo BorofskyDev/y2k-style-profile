@@ -19,45 +19,92 @@ header {
   transition: transform 0.5s cubic-bezier(0.5, 0, 0.5, 1);
   z-index: 100;
 
+  @include respond(land-port) {
+    height: 10vh;
+    width: 100%;
+    top: 10%;
+    border-bottom: 0.5em solid hsl(var(--color-dark));
+    border-radius: 0;
+    box-shadow: none;
+    background-color: hsl(var(--color-light-2));
+  }
+
   &__list {
     display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+    @include respond(land-port) {
+        flex-direction: row;
+        font-size: 1rem;
+        justify-content: space-evenly;
+        gap: 2em;
+        margin-top: -0.6em;
+        margin-right: 4em;
+    }
   }
 
   &__link {
     font-family: var(--text-link);
-    font-size: var(--fs-600);
+    font-size: var(--fs-400);
     letter-spacing: 0.1em;
     transition: all 0.3s ease-in-out;
+    background: transparent;
+    padding: 0.5em;
 
     &:hover,
     &:focus {
       color: hsl(var(--color-highlight-2));
       text-shadow: 0.1em 0.1em 0 hsl(var(--color-dark));
+
+      @include respond(land-port) {
+        background-color:hsl(var(--color-light-3) / 0.9);
+        padding: 0.5em;
+      }
     }
   }
+
 }
 
 // nav button toggle
 
 .nav-toggle {
-  padding: 0.5em;
-  // color: white;
-  // background-color: blue;
-  background: transparent;
+  padding: 1em;
+  background: hsl(var(--color-light-2));
   border: 0;
+  border-radius: 0.1875em;
+  box-shadow: var(--box-shadow-sm);
   cursor: pointer;
   position: absolute;
   right: 1em;
   top: 1em;
+  transition: transform 0.2s ease;
   z-index: 1000;
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(0.0625em);
+  }
+
+  @include respond(tab-port) {
+    margin-right: 4em;
+  }
+
+  @include respond(land-port) {
+    display: none;
+  }
 }
 
 .nav-open .nav {
   transform: translateY(0);
+}
+
+.nav-open .nav-toggle {
+  @include respond(tab-port) {
+    margin-right: 4em;
+  }
 }
 
 .nav-open .hamburger {
@@ -80,14 +127,13 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background-color: hsl(var(--color-light-2));
+  background-color: hsl(var(--color-dark));
   width: 1.5em;
   height: 0.1875em;
   margin: 0.15em 0;
   border-radius: 0.1875em;
   transition: transform 0.25s ease-in-out;
 }
-
 
 .hamburger::before,
 .hamburger::after {
