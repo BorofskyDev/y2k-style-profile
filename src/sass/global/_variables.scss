@@ -28,38 +28,20 @@
   --font-size-xl: 4rem;
   --font-size-lg: 3.125rem;
   --font-size-md: 2.5rem;
-  --font-size-sm: 1.575rem;
+  --font-size-sm: 1.3rem;
 
   // Transformations
 
   --transform-cool-link: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 0.1);
-
-  // --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
-  // --fs-800: 3.5rem;
-  // --fs-700: 1.5rem;
-  // --fs-600: 1rem;
-  // --fs-500: 1rem;
-  // --fs-400: 0.9375rem;
-  // --fs-300: 1rem;
-  // --fs-200: 0.875rem;
-
-  // @media (min-width: 35em) {
-  //   --fs-800: 5rem;
-  //   --fs-700: 2.5rem;
-  //   --fs-600: 1.5rem;
-  //   --fs-500: 1.25rem;
-  //   --fs-400: 1rem;
-  // }
-
-  // @media (min-width: 45em) {
-  //   --fs-800: 6.25rem;
-  //   --fs-700: 3.5rem;
-  //   --fs-600: 2rem;
-  //   --fs-500: 1.75rem;
-  //   --fs-400: 1.125rem;
-  // }
-
+  
   // Shadows
-
   --box-shadow-sm: 0.125em 0.125em 0 hsl(var(--color-dark));
+  --box-shadow-md: 0.25em 0.25em 0 hsl(var(--color-dark));
+  
+  --text-shadow-sm: 0.0625em 0.1em 0 hsl(var(--color-dark));
+
+  // Borders
+  --border-xsm: 0.0625em solid hsl(var(--color-dark));
+  --border-sm: 0.125em solid hsl(var(--color-dark));
+  --border-md: 0.1875em solid hsl(var(--color-dark));
 }

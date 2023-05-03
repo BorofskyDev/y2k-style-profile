@@ -20,7 +20,7 @@
   &::after {
     content: attr(data-text);
     color: hsl(var(--color-highlight-3));
-    text-shadow: 0.0625em 0.1em 0 hsl(var(--color-dark));
+    text-shadow: var(--text-shadow-sm);
     position: absolute;
     top: 0.4375em;
     height: 100%;
