@@ -1,10 +1,10 @@
-
 @import 'global/mixins';
 @import 'global/reset';
 @import 'global/variables';
 
-@import 'layout/_hero';
-@import 'layout/_navigation';
+@import 'layout/about';
+@import 'layout/hero';
+@import 'layout/navigation';
 
 @import 'components/linkEffects';
 @import 'components/picture';
