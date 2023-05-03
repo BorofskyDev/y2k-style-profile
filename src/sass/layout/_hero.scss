@@ -32,6 +32,7 @@
   }
 
   &__title {
+    
     font-family: var(--text-heading);
     font-weight: bolder;
     font-size: var(--font-size-xl);
@@ -139,6 +140,10 @@
       justify-self: flex-start;
       align-self: flex-start;
       transform: rotate(-30deg);
+
+      @include respond(land-port) {
+        grid-row: 2/2;
+      }
     }
 
     &--3 {
@@ -163,6 +168,10 @@
       align-self: flex-end;
       justify-self: center;
       transform: rotate(7deg);
+
+      @include respond(land-port) {
+        grid-row: 3/3;
+      }
     }
   }
 }
