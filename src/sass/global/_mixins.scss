@@ -21,6 +21,24 @@
   }
 }
 
+@mixin pictureContainer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+@mixin imageBox {
+  min-height: 21.25em;
+  min-width: 20.2em;
+  background-color: hsl(var(--color-highlight-2));
+  border: var(--border-xsm);
+  box-shadow: var(--box-shadow-md);
+  display: grid;
+  place-items: center;
+}
+
 @mixin picture {
   height: 15em;
   width: 14em;

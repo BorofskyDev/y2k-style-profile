@@ -15,10 +15,17 @@
 
   @include respond(land-port) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       'skills icons'
       'content objects';
     place-items: center;
+  }
+
+  & canvas {
+    position: absolute;
+    z-index: 2000;
   }
 
   &__icons {
@@ -97,10 +104,12 @@
 
   &__picture {
     grid-area: picture;
-    // background-color: blue;
+    background-image: url(../../../public/img/background/90sGeometric.svg);
+    background-position: contain;
     border-bottom: var(--border-lg);
     position: relative;
     display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     place-items: center;
   }
 }
