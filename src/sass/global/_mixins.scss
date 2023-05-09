@@ -59,7 +59,7 @@
 
 @mixin contentContainer {
   min-height: 21.25em;
-  max-width: 48em;
+  width: 50vw;
   position: relative;
   z-index: 1;
   display: grid;
@@ -71,8 +71,9 @@
     '. content content .'
     '. website repository .'
     '. . . .';
-  border: var(--border-sm);
-  border-radius: var(--br-md);
+    border-bottom: var(--border-sm);
+  border-left: var(--border-sm);
+  // border-radius: var(--br-md);
   box-shadow: var(--box-shadow-lg);
 
   &::before {
@@ -86,7 +87,7 @@
       hsl(var(--color-light-3)) 0%,
       hsl(var(--color-light-1)) 100%
     );
-    border-radius: var(--br-md);
+    // border-radius: var(--br-md);
     opacity: 0;
     transition: opacity 0.6s ease-in;
     z-index: -1;
