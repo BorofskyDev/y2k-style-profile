@@ -15,11 +15,11 @@
     justify-content: space-around;
     gap: 4em;
 
-    @include respond(land-port){
-    flex-direction: row;
-    justify-content: center;
-   width: 90%;
-  }
+    @include respond(land-port) {
+      flex-direction: row;
+      justify-content: center;
+      width: 90%;
+    }
   }
 
   &__still-container {
@@ -32,14 +32,14 @@
     box-shadow: var(--box-shadow-lg);
 
     &--image {
-      height: 15em;
-      width: 14em;
-      background-image: url('../../../public/img/project-pictures/uptown-landing.png');
-      background-size: 180%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: hsl(var(--color-dark));
-      border: var(--border-sm);
+      img {
+        height: 15em;
+        width: 14em;
+        object-fit: cover;
+        background-color: hsl(var(--color-dark));
+        border: var(--border-sm);
+        object-position: scale-down;
+      }
     }
 
     &--title {
@@ -52,17 +52,12 @@
     }
   }
 
-  &__content-container-1 {
+  &__content-container {
     @include contentContainer;
     background-image: radial-gradient(
       hsl(var(--color-primary-regular)) 0%,
       hsl(var(--color-primary-light)) 100%
     );
-
-
-    transition: background-image 0.6s ease-in-out;
-
-    
 
     &--tech {
       grid-area: content;
