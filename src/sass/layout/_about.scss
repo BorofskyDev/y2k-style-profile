@@ -1,5 +1,5 @@
 .about {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -10,38 +10,39 @@
   grid-template-areas:
     'stack'
     'icons'
-    'about'
-    'picture';
+    'content'
+    'image';
 
   @include respond(land-port) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      'skills icons'
-      'content objects';
-    place-items: center;
-  }
-
-  & canvas {
-    position: absolute;
-    z-index: 2000;
+    margin: 0;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+      'icons stack'
+      'content image';
   }
 
   &__icons {
-    min-height: 20em;
+    height: 25em;
     grid-area: icons;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      '. . . .'
-      '. html css .'
-      '. javascript react .';
-    border-top: var(--border-md);
-    border-bottom: var(--border-md);
+    '. . . .'
+    '. html css .'
+    '. javascript react .';
+    border-top: var(--border-lg);
+    border-bottom: var(--border-sm);
+    border-right: var(--border-sm);
+    place-items: center;
     // padding-top: 25%;
     gap: 1em;
+    
+    @include respond(land-port) {
+      width: 50vw;
+    }
 
     &--html {
       @include icon;
@@ -66,17 +67,18 @@
       grid-area: react;
       background-color: hsl(var(--color-light-1));
     }
-
-    &--5 {
-      background-color: hsl(var(--color-primary-light));
-    }
   }
 
   &__stack {
+    height: 25em;
+    width: 100%;
+    display: grid;
+    place-content: center;
     grid-area: stack;
     padding-bottom: 3em;
     border-top: var(--border-lg);
-    text-align: center;
+    border-bottom: var(--border-sm);
+    border-left: var(--border-sm);
     background-color: hsl(var(--color-highlight-2));
   }
 
@@ -94,22 +96,39 @@
   }
 
   &__content {
-    grid-area: about;
+    height: 25em;
+    grid-area: content;
     padding: 3em 2em;
     background-color: hsl(var(--color-highlight-2));
     border-bottom: var(--border-md);
-    line-height: 1.5;
+    line-height: 2;
     font-weight: 500;
+    display: grid;
+    place-content: center;
+
+    @include respond(land-port) {
+      border-top: var(--border-sm);
+      border-right: var(--border-sm);
+      border-bottom: var(--border-lg);
+    }
   }
 
   &__picture {
-    grid-area: picture;
+    height: 25em;
+    grid-area: image;
     background-image: url(../../../public/img/background/90sGeometric.svg);
     background-position: contain;
-    border-bottom: var(--border-lg);
+    // border-bottom: var(--border-lg);
     position: relative;
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(4, 1fr);
     place-items: center;
+    place-content: center;
+
+    @include respond(land-port) {
+      border-top: var(--border-sm);
+      border-left: var(--border-sm);
+      border-bottom: var(--border-lg);
+    }
   }
 }
