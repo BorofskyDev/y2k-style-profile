@@ -18,7 +18,7 @@
     grid-auto-columns: 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
       'icons stack'
       'content image';
   }
@@ -30,15 +30,15 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    '. . . .'
-    '. html css .'
-    '. javascript react .';
+      '. . . .'
+      '. html css .'
+      '. javascript react .';
     border-top: var(--border-sm);
     border-bottom: var(--border-sm);
     place-items: center;
     // padding-top: 25%;
     gap: 1em;
-    
+
     @include respond(land-port) {
       width: 50vw;
       border-top: var(--border-lg);
@@ -80,7 +80,7 @@
     border-top: var(--border-lg);
     border-bottom: var(--border-sm);
     background-color: hsl(var(--color-highlight-2));
-    
+
     @include respond(land-port) {
       border-left: var(--border-sm);
     }

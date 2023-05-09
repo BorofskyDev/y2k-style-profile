@@ -40,11 +40,12 @@
   // Transformations
 
   --transform-cool-link: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 0.1);
-  
+
   // Shadows
   --box-shadow-sm: 0.125em 0.125em 0 hsl(var(--color-dark));
   --box-shadow-md: 0.25em 0.25em 0 hsl(var(--color-dark));
-  
+  --box-shadow-lg: 0.5em 0.5em 0 hsl(var(--color-dark));
+
   --text-shadow-sm: 0.0625em 0.1em 0 hsl(var(--color-dark));
 
   // Borders

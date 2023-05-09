@@ -1,0 +1,35 @@
+.projects {
+    height: 100vh;
+    background-color: hsl(var(--color-highlight-1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__card {
+        height: 40em;
+        width: 21em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        &--image {
+            background-image: url('../../../public/img/')
+        }
+    }
+
+    &__still-container {
+        height: 16em;
+        width: 19em;
+        border: var(--border-sm);
+        box-shadow: var(--box-shadow-lg);
+    }
+
+    &__content-container {
+        height: 16em;
+        width: 22em;
+        border: var(--border-sm);
+        box-shadow: var(--box-shadow-lg);
+    }
+}
