@@ -58,8 +58,8 @@
 }
 
 @mixin contentContainer {
-  height: 18.25em;
-  width: 28em;
+  min-height: 21.25em;
+  max-width: 48em;
   position: relative;
   z-index: 1;
   display: grid;
