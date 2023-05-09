@@ -33,15 +33,16 @@
     '. . . .'
     '. html css .'
     '. javascript react .';
-    border-top: var(--border-lg);
+    border-top: var(--border-sm);
     border-bottom: var(--border-sm);
-    border-right: var(--border-sm);
     place-items: center;
     // padding-top: 25%;
     gap: 1em;
     
     @include respond(land-port) {
       width: 50vw;
+      border-top: var(--border-lg);
+      border-right: var(--border-sm);
     }
 
     &--html {
@@ -78,8 +79,11 @@
     padding-bottom: 3em;
     border-top: var(--border-lg);
     border-bottom: var(--border-sm);
-    border-left: var(--border-sm);
     background-color: hsl(var(--color-highlight-2));
+    
+    @include respond(land-port) {
+      border-left: var(--border-sm);
+    }
   }
 
   &__list {
@@ -100,7 +104,7 @@
     grid-area: content;
     padding: 3em 2em;
     background-color: hsl(var(--color-highlight-2));
-    border-bottom: var(--border-md);
+    border-bottom: var(--border-sm);
     line-height: 2;
     font-weight: 500;
     display: grid;
@@ -118,7 +122,7 @@
     grid-area: image;
     background-image: url(../../../public/img/background/90sGeometric.svg);
     background-position: contain;
-    // border-bottom: var(--border-lg);
+    border-bottom: var(--border-lg);
     position: relative;
     display: grid;
     grid-template: repeat(4, 1fr) / repeat(4, 1fr);
@@ -128,7 +132,6 @@
     @include respond(land-port) {
       border-top: var(--border-sm);
       border-left: var(--border-sm);
-      border-bottom: var(--border-lg);
     }
   }
 }
