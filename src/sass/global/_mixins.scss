@@ -56,3 +56,61 @@
   border: var(--border-sm);
   box-shadow: var(--box-shadow-sm);
 }
+
+@mixin contentContainer {
+  height: 18.25em;
+  width: 28em;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.5fr repeat(2, 1.5fr) 0.5fr;
+  grid-template-rows: 0.5fr repeat(2, 1.5fr) 0.5fr;
+  grid-template-areas:
+    '. . . .'
+    '. content content .'
+    '. website repository .'
+    '. . . .';
+  border: var(--border-sm);
+  border-radius: var(--br-md);
+  box-shadow: var(--box-shadow-lg);
+}
+
+@mixin projectsLink {
+  align-self: center;
+  justify-self: center;
+  font-family: var(--text-link);
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    text-shadow: var(--text-shadow-sm);
+    color: hsl(var(--color-highlight-2));
+
+    svg path {
+      stroke-dashoffset: 0;
+      transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    stroke-width: 0.1875em;
+    width: 5.9475em;
+
+    path {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+    }
+  }
+
+
+
+
+  &:hover {
+    stroke-dashoffset: 0;
+    transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+  }
+}

@@ -5,6 +5,7 @@
   --color-primary-dark: 270 99% 47%;
   // #7801EF
   --color-primary-light: 322 100% 61%;
+  // #FF38B6
   --color-primary-xlight: 313 100% 79%;
 
   --color-highlight-1: 76 100% 83%;
@@ -22,6 +23,9 @@
 
   --color-dark: 135 100% 1%;
   // #000501
+
+  --color-background-1: hsl(var(--color-primary-regular));
+  --color-background-2: hsl(var(--color-highlight-2));
 
   //   Typography
 
@@ -53,4 +57,6 @@
   --border-sm: 0.125em solid hsl(var(--color-dark));
   --border-md: 0.1875em solid hsl(var(--color-dark));
   --border-lg: 0.375em solid hsl(var(--color-dark));
+
+  --br-md: 1.5625em;
 }
