@@ -27,10 +27,10 @@
   &__still-container {
     min-height: 21.25em;
     width: 50vw;
-    background-color: hsl(var(--color-primary-regular));
+    background-color: hsl(var(--color-highlight-1));
     display: grid;
     place-items: center;
-    border-right: var(--border-sm);
+    // border-right: var(--border-sm);
     border-bottom: var(--border-sm);
     box-shadow: var(--box-shadow-lg);
 
@@ -57,10 +57,7 @@
 
   &__content-container {
     @include contentContainer;
-    background-image: radial-gradient(
-      hsl(var(--color-light-2)) 0%,
-      hsl(var(--color-highlight-2)) 100%
-    );
+    background-color: hsl(var(--color-highlight-1));
 
     &--tech {
       grid-area: content;
