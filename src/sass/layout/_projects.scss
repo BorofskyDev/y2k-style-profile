@@ -14,10 +14,6 @@
     align-items: center;
     justify-content: space-around;
     gap: 4em;
-
-    &--image {
-      background-image: url('../../../public/img/');
-    }
   }
 
   &__still-container {
@@ -28,15 +24,39 @@
     place-items: center;
     border: var(--border-sm);
     box-shadow: var(--box-shadow-lg);
+
+    &--image {
+      height: 15em;
+      width: 14em;
+      background-image: url('../../../public/img/project-pictures/uptown-landing.png');
+      background-size: 180%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: hsl(var(--color-dark));
+      border: var(--border-sm);
+    }
+
+    &--title {
+      text-align: center;
+      font-family: var(--text-handwritten);
+      font-size: 1.6rem;
+      letter-spacing: 0.0125em;
+      transform: rotate(-6deg);
+      margin-bottom: 1.3em;
+    }
   }
 
   &__content-container-1 {
     @include contentContainer;
-    background-image: radial-gradient(hsl(var(--color-primary-regular)) 0%, hsl(var(--color-primary-light)) 100%);
+    background-image: radial-gradient(
+      hsl(var(--color-primary-regular)) 0%,
+      hsl(var(--color-primary-light)) 100%
+    );
 
-    &:hover {
-        background-color: hsl(var(--color-primary-dark));
-    }
+
+    transition: background-image 0.6s ease-in-out;
+
+    
 
     &--tech {
       grid-area: content;
@@ -45,6 +65,7 @@
       display: grid;
       padding-bottom: 2em;
       text-align: center;
+      font-weight: bold;
     }
 
     &--website {
